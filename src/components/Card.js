@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import PropTypes from 'prop-types';
 
-const Card = ({ children, handleClick = null }) => (
-  <div onClick={handleClick} className="card">
+const Card = ({ className = '', children, handleClick = null }) => (
+  <div onClick={handleClick} className={`card ${className}`}>
     {children}
   </div>
 );

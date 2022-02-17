@@ -1,3 +1,5 @@
+import { fetchFromAPI } from '../../utils/fetchApi';
+
 const initialState = {
   standings: [],
   isLoading: false,
@@ -17,21 +19,19 @@ export const fetchStandingsFail = () => ({
 });
 
 export const fetchStandingsFromAPI = () => async (dispatch) => {
-    dispatch(fetchStandings());
-  
-    try {
-      const standings = await fetchFromAPI(
-        'https://api-football-v1.p.rapidapi.com/v3/standings?season=2021&league=39',
-      );
-      console.log(standings);
-      dispatch(
-        fetchStandingsSuccess([standings.response][0][0].league.standings[0]),
-      );
-    } catch (err) {
-      console.error(err);
-      dispatch(fetchStandingsFail());
-    }
-  };
+  dispatch(fetchStandings());
+
+  try {
+    const standings = await fetchFromAPI(
+      'https://api-football-beta.p.rapidapi.com/standings?season=2021&league=61',
+    );
+    dispatch(
+      fetchStandingsSuccess([standings.response][0][0].league.standings[0]),
+    );
+  } catch (err) {
+    dispatch(fetchStandingsFail());
+  }
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -43,7 +43,7 @@ const reducer = (state = initialState, action) => {
       return { isLoading: false, standings: [] };
     default:
       return state;
-    }
+  }
 };
 
 export default reducer;

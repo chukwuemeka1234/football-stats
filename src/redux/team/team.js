@@ -1,3 +1,5 @@
+import { fetchFromAPI } from '../../utils/fetchApi';
+
 const initialState = {
   team: null,
   isLoading: false,
@@ -17,19 +19,17 @@ export const fetchTeamFail = () => ({
 });
 
 export const fetchTeamFromAPI = (id) => async (dispatch) => {
-    dispatch(fetchTeam());
-  
-    try {
-      const team = await fetchFromAPI(
-        `https://api-football-v1.p.rapidapi.com/v3/teams/statistics?league=39&season=2021&team=${id}`,
-      );
-      console.log(team.response);
-      dispatch(fetchTeamSuccess(team.response));
-    } catch (err) {
-      console.error(err);
-      dispatch(fetchTeamFail());
-    }
-  };
+  dispatch(fetchTeam());
+
+  try {
+    const team = await fetchFromAPI(
+      `https://api-football-beta.p.rapidapi.com/teams/statistics?league=61&season=2021&team=${id}`,
+    );
+    dispatch(fetchTeamSuccess(team.response));
+  } catch (err) {
+    dispatch(fetchTeamFail());
+  }
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
