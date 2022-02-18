@@ -1,3 +1,436 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #272a31;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  background-color: #272a31;
+}
+
+.container-head {
+  width: 100%;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.header-title {
+  padding: 0;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  color: #fff9f9;
+}
+
+.header__links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.header__link {
+  padding: 1rem;
+}
+
+.header__links:hover {
+  color: #be0d0d;
+}
+
+.nav-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-item {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.hero-section {
+  padding: 10rem 0;
+  background-image: linear-gradient(rgba(58, 56, 56, 0.9), rgb(27, 25, 25)), url(./components/assets/parc-des-princes-1599745691.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-shadow: inset 0 -9px 35px rgba(0, 0, 0, 0.25);
+}
+
+.container-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section__title {
+  color: #fff;
+  font-size: 4.5rem;
+  text-shadow: 2px -5px 0 rgba(0, 0, 0, 0.55);
+  text-align: center;
+}
+
+.teams-section {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+}
+
+.teams-section__input-search {
+  background-color: transparent;
+  outline: 1px solid #fff;
+  border: none;
+  padding: 1em;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.teams-section__input-search::placeholder {
+  color: #fff;
+}
+
+.teams-section__input-search:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.teams-section__teams {
+  width: 100%;
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.team {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  transition: transform 0.5s;
+}
+
+.team--link {
+  cursor: pointer;
+}
+
+.team--link:hover {
+  transform: scale(1.05);
+}
+
+.team__logo {
+  width: 50%;
+  max-width: 120px;
+}
+
+.team__name {
+  color: #fff;
+}
+
+.card {
+  background-color: #30333c;
+  border-radius: 10px;
+  box-shadow: 0 11px 14px 5px rgba(0, 0, 0, 0.25);
+}
+
+.standings {
+  overflow: hidden;
+  font-weight: 700;
+}
+
+.standings-team {
+  padding: 1rem;
+  border-bottom: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.standings:last-of-type {
+  border-bottom: none;
+}
+
+.standing-team-rank {
+  width: 5%;
+}
+
+.standings-team-logo {
+  max-width: 2rem;
+  margin-right: 1rem;
+}
+
+.standing-team-name {
+  width: 30%;
+}
+
+.standings-team-name-highlighted {
+  color: #60ab4d;
+}
+
+.standings-page {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.team-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-form__result {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.team-form__result--win {
+  color: #60ab4d;
+}
+
+.team-form__result--draw {
+  color: #707070;
+}
+
+.team-form__result--lose {
+  color: #a04242;
+}
+
+.team-goals {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.team-goals__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.team-goals__subtitle--scored {
+  color: #60ab4d;
+}
+
+.team-goals__subtitle--conceded {
+  color: #a04242;
+}
+
+.team-goals__total {
+  margin-bottom: 0.5rem;
+}
+
+.team-league {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.team-league__logo,
+.team-league__flag {
+  max-width: 7rem;
+}
+
+.team-league__logo {
+  width: 40%;
+}
+
+.team-league__flag {
+  width: 20%;
+}
+
+.team-league__title {
+  color: #fff;
+}
+
+.team-matches {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.team-matches__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.team-matches__subtitle--win {
+  color: #60ab4d;
+}
+
+.team-matches__subtitle--draw {
+  color: #707070;
+}
+
+.team-matches__subtitle--loss {
+  color: #a04242;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container--small {
+  max-width: 1000px;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.team-page {
+  padding: 3rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.team-page__backwards-btn {
+  padding: 0.2em 0.5em;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.team-page__backwards-btn:hover {
+  border-color: #000;
+  color: #000;
+}
+
+.team-page__stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.team-page__form {
+  grid-row: 2 / 3;
+  padding: 1.5rem;
+}
+
+.team-page__goals {
+  grid-row: 1 / 3;
+  padding: 1.5rem;
+}
+
+.team-page__matches {
+  padding: 1.5rem;
+  grid-row: 1 / 3;
+}
+
+.team-page__standings {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 320px) {
+  html,
+  body {
+    font-size: 11px;
+  }
+
+  .header-title {
+    display: none;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  .container-head {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 375px) {
+  html,
+  body {
+    font-size: 11px;
+  }
+
+  .header-title {
+    display: none;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  .container-head {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 425px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+
+  .header-title {
+    display: none;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  .container-head {
+    display: flex;
+    justify-content: center;
+  }
 }
