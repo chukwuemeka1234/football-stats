@@ -36,8 +36,8 @@
 
 > Warning! The API has limit of 100 requests per day!
 
-[Live Demo Link (Netlify)]()
-[Live Demo Link (Heroku)]()
+[Live Demo Link (Netlify)](https://sharp-ardinghelli-96e3e2.netlify.app/)
+[Live Demo Link (Heroku)](https://afternoon-fortress-26848.herokuapp.com/)
 
 ## Getting Started
 
