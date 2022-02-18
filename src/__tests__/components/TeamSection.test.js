@@ -38,4 +38,24 @@ describe('TeamSection', () => {
     const message = screen.getByText('loading...');
     expect(message).toBeInTheDocument();
   });
+
+  it('Should display correct amount of teams', async () => {
+    render(<MockedTeamSection />);
+    store.dispatch(mockedFetchAction());
+    const teams = await screen.findAllByRole('heading', {
+      name: 'Angers',
+    });
+
+    expect(teams.length).toBe(1);
+  });
+
+  it('Should display angers team correctly', async () => {
+    render(<MockedTeamSection />);
+    store.dispatch(mockedFetchAction());
+    const team = await screen.findAllByRole('heading', {
+      name: 'Angers',
+    });
+
+    expect(team[0]).toBeInTheDocument();
+  });
 });

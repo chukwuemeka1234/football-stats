@@ -11,13 +11,13 @@ const MockedStandings = () => (
 );
 
 const mockedFetchAction = () => ({
-  type: 'football-stats/standings/FETCH_STANDINGS_SUCCESS',
+  type: 'FETCH_STANDINGS_SUCCESS',
   payload: [
     {
       rank: 1,
       team: {
         id: 85,
-        name: 'Manchester City',
+        name: 'Paris Saint Germain',
         logo: 'https://media.api-sports.io/football/teams/85.png',
       },
       points: 59,
@@ -40,5 +40,19 @@ describe('Standings component', () => {
     render(<MockedStandings />);
     const message = screen.getByText('Loading...');
     expect(message).toBeInTheDocument();
+  });
+
+  it('should render the correct amount of teams', async () => {
+    render(<MockedStandings />);
+    store.dispatch(mockedFetchAction());
+    const teams = await screen.findAllByText('Paris Saint Germain');
+    expect(teams.length).toBe(1);
+  });
+
+  it('should render the correct data', async () => {
+    render(<MockedStandings />);
+    store.dispatch(mockedFetchAction());
+    const teams = await screen.findAllByText('Paris Saint Germain');
+    expect(teams[0]).toBeInTheDocument();
   });
 });
