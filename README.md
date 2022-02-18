@@ -14,7 +14,7 @@
 <img alt="my profile page" src='./screenshot3.PNG' width=90%/>
 </div>
 <div>
-<img alt="my profile page" src='./screenshot4.PNG' width=90%/>
+<img alt="my profile page" src='./screenshot4.PNG' width=50%/>
 </div>
 
 ## Built With
