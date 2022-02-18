@@ -23,7 +23,7 @@ const TeamsSection = () => {
       <form className="teams-section__form">
         <input
           type="text"
-          placeholder="Team name"
+          placeholder="Search team"
           className="teams-section__input-search"
           value={searchField}
           onChange={handleSearchFieldChange}

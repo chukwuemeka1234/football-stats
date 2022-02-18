@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Teams from './pages/teamsPage';
 import StandingsPage from './pages/standingsPage';
 import TeamPage from './pages/teamPage';
+import './index.css';
 
 const App = () => (
   <div>
