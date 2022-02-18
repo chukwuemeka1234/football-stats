@@ -30,7 +30,7 @@
 
 ## Video Presentation
 
-[Video Presentation Link]()
+[Video Presentation Link](https://www.loom.com/share/7639b54a7f394b31aebdbb7d06350970)
 
 ## Live Demo
 
