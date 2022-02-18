@@ -14,7 +14,7 @@
 <img alt="my profile page" src='./screenshot3.PNG' width=90%/>
 </div>
 <div>
-<img alt="my profile page" src='./screenshot4.PNG' width=90%/>
+<img alt="my profile page" src='./screenshot4.PNG' width=50%/>
 </div>
 
 ## Built With
@@ -30,14 +30,14 @@
 
 ## Video Presentation
 
-[Video Presentation Link]()
+[Video Presentation Link](https://www.loom.com/share/7639b54a7f394b31aebdbb7d06350970)
 
 ## Live Demo
 
 > Warning! The API has limit of 100 requests per day!
 
-[Live Demo Link (Netlify)]()
-[Live Demo Link (Heroku)]()
+[Live Demo Link (Netlify)](https://sharp-ardinghelli-96e3e2.netlify.app/)
+[Live Demo Link (Heroku)](https://afternoon-fortress-26848.herokuapp.com/)
 
 ## Getting Started
 
@@ -54,7 +54,7 @@ To run the project on your local machine you need to have:
 
 Go to the terminal and type:
 
-- `git clone https://github.com/anuarshaidenov/premstats.git [YOUR_PROJECT_NAME]`
+- `git clone https://github.com/chukwuemeka1234/football-stats.git [YOUR_PROJECT_NAME]`
 - `cd [YOUR_PROJECT_NAME]`
 - `npm install`
 
