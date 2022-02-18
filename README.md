@@ -54,7 +54,7 @@ To run the project on your local machine you need to have:
 
 Go to the terminal and type:
 
-- `git clone https://github.com/anuarshaidenov/premstats.git [YOUR_PROJECT_NAME]`
+- `git clone https://github.com/chukwuemeka1234/football-stats.git [YOUR_PROJECT_NAME]`
 - `cd [YOUR_PROJECT_NAME]`
 - `npm install`
 
